@@ -1,0 +1,42 @@
+/******************************************************************************
+
+    Filename:       day3.cpp
+    Description:    Program to demonstrate math and user input
+    Author:         MAX TAYLOR
+    Date:            1/15/19
+*******************************************************************************/
+#include <iostream>
+#include <string>
+#include <iomanip>
+using namespace std;
+
+int main()
+{
+    int numInStock;         //amount of that product in stock   
+    float price4One;        //price of 1 of a product
+    bool inStock;           //true if in stock, false if not
+    char source;            // G for generic, B for brand name
+    string productName;     //name of product
+    
+    //User input
+    cout << "What is the name of the product?" << endl;
+    getline(cin, productName);
+    cout << "How many" << productName << " s are in stock?" << endl;
+    cin >> numInStock;
+    cout <<"What is the price of one " << productName << "? << endl";
+    cin >> price4One;
+    cout << "what is the source? G for generic, B for brand-name." << endl;
+    cin >> source;
+    cout << "are there " << productName << "s in stock? 1 for yes, 0 for no." << endl;
+    cin >> inStock;
+    
+    cout << endl << endl;
+    cout << "\t\t Product Inventory\n\n";
+    cout << "Product:            " << productName << endl;
+    cout << "# in stock:         " << numInStock << endl;
+    cout << "Price for one:      " << price4One << endl;
+    cout << "Source:             " << source << endl;
+    cout << "In stock?           " << inStock << endl;
+    
+    return 0;
+}
